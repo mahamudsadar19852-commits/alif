@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIFE - Dream Explore Enjoy</title>
+    <!-- Font Awesome CDN (সোশ্যাল মিডিয়া আইকনের জন্য) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ব্যাকগ্রাউন্ড ছবি সেট করা আছে CSS-এ -->
+    
+    <!-- সোশ্যাল মিডিয়া আইকনগুলো উপরে ডানদিকে রাখা হয়েছে -->
+    <div class="social-icons">
+        <a href="https://youtube.com" target="_blank" class="icon youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://facebook.com" target="_blank" class="icon facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://tiktok.com" target="_blank" class="icon tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://instagram.com" target="_blank" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <!-- নিচের দিকে কন্টেইনার (ডকুমেন্ট লকার এবং পোস্ট ফাইল) -->
+    <div class="bottom-container">
+        
+        <!-- ডকুমেন্ট সেকশন (পাসওয়ার্ড লক) -->
+        <div class="box">
+            <h3><i class="fa-solid fa-file-lines"></i> ডকুমেন্ট লকার</h3>
+            <p>গোপন ফাইল দেখতে পাসওয়ার্ড দিন:</p>
+            <input type="password" id="password" placeholder="পাসওয়ার্ড দিন">
+            <button onclick="checkPassword()">আনলক করুন</button>
+            
+            <!-- পাসওয়ার্ড দিলে এই ডকুমেন্টগুলো দেখা যাবে -->
+            <div id="secretDocs" style="display: none;">
+                <a href="#" download>📄 Document 1 (Link)</a>
+                <a href="#" download>📄 Document 2 (Link)</a>
+            </div>
+        </div>
+
+        <!-- পোস্ট/ছবি/ভিডিও আপলোড সেকশন -->
+        <div class="box">
+            <h3><i class="fa-solid fa-images"></i> আমার পোস্ট (ছবি ও ভিডিও)</h3>
+            <p>এখানে আপনার ছবি বা ভিডিও আপলোড করুন:</p>
+            <input type="file" id="mediaUpload" accept="image/*,video/*" onchange="showPreview()">
+            
+            <!-- আপলোড করা ছবি/ভিডিও দেখার জায়গা -->
+            <div id="previewArea"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
